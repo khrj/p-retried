@@ -6,8 +6,8 @@ Abstraction for exponential and custom retry strategies for failed operations
 
 ## Usage
 
-```ts
-import pRetried from 'https://deno.land/x/p-retried@1.0.0/mod.ts'
+``` ts
+import pRetried from 'https://deno.land/x/p_retried@1.0.0/mod.ts'
 
 async function run () {
 	const response = await fetch('https://sindresorhus.com/unicorn')
@@ -25,25 +25,29 @@ console.log(await pRetry(run, { retries: 5 }))
 
 ## API
 
-See https://doc.deno.land/https/deno.land/x/p-retried@1.0.0/lib/mod.ts
+See https://doc.deno.land/https/deno.land/x/p_retried@1.0.0/lib/mod.ts
 
 ## Tip
 
 You can pass arguments to the function being retried by wrapping it in an inline arrow function:
 
-```js
+``` js
 const pRetry = require('p-retry');
 
 const run = async emoji => {
-	// …
+    // …
 };
 
 (async () => {
-	// Without arguments
-	await pRetry(run, {retries: 5});
+    // Without arguments
+    await pRetry(run, {
+        retries: 5
+    });
 
-	// With arguments
-	await pRetry(() => run('🦄'), {retries: 5});
+    // With arguments
+    await pRetry(() => run('🦄'), {
+        retries: 5
+    });
 })();
 ```
 

@@ -8,7 +8,7 @@ interface InputOptions extends retried.OperationOptions {
      * left, respectively.
      *
      * ```ts
-     * import pRetried from 'https://deno.land/x/p-retried@1.0.0/mod.ts'
+     * import pRetried from 'https://deno.land/x/p_retried@1.0.0/mod.ts'
      *
      * async function run () => {
      *     const response = await fetch('https://sindresorhus.com/unicorn')
@@ -36,7 +36,7 @@ interface InputOptions extends retried.OperationOptions {
      * do some async logging:
      *
      * ```ts
-     * import pRetried from 'https://deno.land/x/p-retried@1.0.0/mod.ts'
+     * import pRetried from 'https://deno.land/x/p_retried@1.0.0/mod.ts'
      * import { log } from './async-logger.ts'
      * const run = async () => { 
      *     // … 
