@@ -8,7 +8,7 @@ interface InputOptions extends retried.OperationOptions {
      * left, respectively.
      *
      * ```ts
-     * import pRetried from 'https://deno.land/x/p_retried@1.0.0/mod.ts'
+     * import pRetried from 'https://deno.land/x/p_retried/mod.ts'
      *
      * async function run () => {
      *     const response = await fetch('https://sindresorhus.com/unicorn')
@@ -19,7 +19,7 @@ interface InputOptions extends retried.OperationOptions {
      *     }
      * }
      *
-     * const result = await pRetry(run, {
+     * const result = await pRetried(run, {
      *    onFailedAttempt: error => {
      *        console.log(`Attempt ${error.attemptNumber} failed. There are ${error.retriesLeft} retries left.`); 
      *        // 1st request => Attempt 1 failed. There are 4 retries left. 
@@ -36,13 +36,13 @@ interface InputOptions extends retried.OperationOptions {
      * do some async logging:
      *
      * ```ts
-     * import pRetried from 'https://deno.land/x/p_retried@1.0.0/mod.ts'
+     * import pRetried from 'https://deno.land/x/p_retried/mod.ts'
      * import { log } from './async-logger.ts'
      * const run = async () => { 
      *     // … 
      * }
      *
-     * const result = await pRetry(run, {
+     * const result = await pRetried(run, {
      *     onFailedAttempt: async error => {
      *         await logger.log(error)
      *     }
