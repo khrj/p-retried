@@ -1,6 +1,6 @@
 import * as retried from 'https://deno.land/x/retried@1.0.1/mod.ts'
 
-interface InputOptions extends retried.OperationOptions {
+export interface InputOptions extends retried.OperationOptions {
     /** 
      * Function invoked on each retry. Receives the error thrown by `input` as
      * the first argument with properties `attemptNumber` and `retriesLeft`
