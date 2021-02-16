@@ -70,7 +70,14 @@ await pRetried(() => run("🦄"), {
 })
 ```
 
-## License/Credits
+## Supporters
+
+- HUGE thanks to @sindresorhus -- this repository is mostly his code, modified to work with Deno
+
+[![Stargazers repo roster for @KhushrajRathod/pRetried](https://reporoster.com/stars/KhushrajRathod/pRetried)](https://github.com/KhushrajRathod/pRetried/stargazers)
+
+[![Forkers repo roster for @KhushrajRathod/pRetried](https://reporoster.com/forks/KhushrajRathod/pRetried)](https://github.com/KhushrajRathod/pRetried/network/members)
+
 ## Related
 
 - [pTimeout](https://github.com/KhushrajRathod/pTimeout)
