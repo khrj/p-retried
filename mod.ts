@@ -1,4 +1,4 @@
-import * as retried from 'https://deno.land/x/retried@1.0.1/mod.ts'
+import * as retried from "https://deno.land/x/retried@1.0.1/mod.ts"
 
 export interface InputOptions extends retried.OperationOptions {
     /** 
@@ -52,19 +52,19 @@ export interface InputOptions extends retried.OperationOptions {
      * If the `onFailedAttempt` function throws, all retries will be aborted and
      * the original promise will reject with the thrown error.
      */
-    onFailedAttempt?: (error: RetryError) => void | Promise<void>,
+    onFailedAttempt?: (error: RetryError) => void | Promise<void>
 
     /** Number of tries to retry before rejecting */
     retries?: number
 }
 
 interface Options extends retried.OperationOptions {
-    onFailedAttempt: (error: RetryError) => void | Promise<void>,
+    onFailedAttempt: (error: RetryError) => void | Promise<void>
     retries: number
 }
 
 interface RetryError extends Error {
-    attemptNumber: number,
+    attemptNumber: number
     retriesLeft: number
 }
 
@@ -88,7 +88,7 @@ export class AbortError extends Error {
             this.originalError.stack = this.stack
         }
 
-        this.name = 'AbortError'
+        this.name = "AbortError"
         this.message = message
     }
 }
@@ -97,7 +97,7 @@ const decorateErrorWithCounts = (error: Error, attemptNumber: number, { retries 
     // Minus 1 from attemptNumber because the first attempt does not count as a retry
     const retriesLeft = retries - (attemptNumber - 1)
 
-    let retryError = error as RetryError
+    const retryError = error as RetryError
 
     retryError.attemptNumber = attemptNumber
     retryError.retriesLeft = retriesLeft
@@ -127,15 +127,15 @@ const decorateErrorWithCounts = (error: Error, attemptNumber: number, { retries 
  * 
  * @param inputOptions Additional options passed to `retried` - https://github.com/KhushrajRathod/retried
  */
-export default function pRetried(
-    input: (attempt: number) => Promise<any>,
-    inputOptions: InputOptions
-): Promise<any> {
+export default function pRetried<T>(
+    input: (attempt: number) => Promise<T>,
+    inputOptions: InputOptions,
+): Promise<T> {
     return new Promise((resolve, reject) => {
         const options: Options = {
-            onFailedAttempt: () => { },
+            onFailedAttempt: () => {},
             retries: 10,
-            ...inputOptions
+            ...inputOptions,
         }
 
         const operation = retried.operation(options)
@@ -152,7 +152,7 @@ export default function pRetried(
                 if (error instanceof AbortError) {
                     operation.stop()
                     reject(error.originalError)
-                } else if (error instanceof TypeError && error.message !== 'Failed to fetch') {
+                } else if (error instanceof TypeError && error.message !== "Failed to fetch") {
                     operation.stop()
                     reject(error)
                 } else {
