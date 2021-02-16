@@ -1,6 +1,25 @@
-# P(romise) Retried
 
-> Retry a promise-returning or async function
+<div align="center">
+    <img src="assets/logo.svg" width="700" height="500" alt="Retry Icon">
+    <h1>Promise Retried</h1>
+    <p>
+        <b>Retry a promise-returning or async function. Deno port of <a href="https://github.com/sindresorhus/p-retry">sindresorhus's p-retry for node</a></b>
+    </p>
+    <p>
+        <img alt="build status" src="https://img.shields.io/github/workflow/status/KhushrajRathod/pRetried/Deno?label=checks" >
+        <img alt="language" src="https://img.shields.io/github/languages/top/KhushrajRathod/pRetried" >
+        <img alt="code size" src="https://img.shields.io/github/languages/code-size/KhushrajRathod/pRetried">
+        <img alt="issues" src="https://img.shields.io/github/issues/KhushrajRathod/pRetried" >
+        <img alt="license" src="https://img.shields.io/github/license/KhushrajRathod/pRetried">
+        <img alt="version" src="https://img.shields.io/github/v/release/KhushrajRathod/pRetried">
+    </p>
+    <p>
+        <b><a href="https://deno.land/x/p_retried">View on deno.land</a></b>
+    </p>
+    <br>
+    <br>
+    <br>
+</div>
 
 Abstraction for exponential and custom retry strategies for failed operations
 
