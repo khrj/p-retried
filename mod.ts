@@ -1,4 +1,4 @@
-import * as retried from "https://deno.land/x/retried@1.0.1/mod.ts"
+import { retried } from './deps.ts'
 
 export interface InputOptions extends retried.OperationOptions {
     /** 
@@ -133,7 +133,7 @@ export default function pRetried<T>(
 ): Promise<T> {
     return new Promise((resolve, reject) => {
         const options: Options = {
-            onFailedAttempt: () => {},
+            onFailedAttempt: () => { },
             retries: 10,
             ...inputOptions,
         }
