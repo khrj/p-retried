@@ -28,7 +28,7 @@ Abstraction for exponential and custom retry strategies for failed operations
 ```ts
 import pRetried, {
     AbortError,
-} from "https://deno.land/x/p_retried@1.0.5/mod.ts"
+} from "https://deno.land/x/p_retried@1.0.6/mod.ts"
 
 async function run() {
     const response = await fetch("https://sindresorhus.com/unicorn")
@@ -46,14 +46,14 @@ console.log(await pRetried(run, { retries: 5 }))
 
 ## API
 
-See https://doc.deno.land/https/deno.land/x/p_retried@1.0.5/lib/mod.ts
+See https://doc.deno.land/https/deno.land/x/p_retried@1.0.6/lib/mod.ts
 
 ## Tip
 
 You can pass arguments to the function being retried by wrapping it in an inline arrow function:
 
 ```js
-import pRetried from "https://deno.land/x/p_retried@1.0.5/mod.ts"
+import pRetried from "https://deno.land/x/p_retried@1.0.6/mod.ts"
 
 const run = async emoji => {
     // …
