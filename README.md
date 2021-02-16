@@ -71,6 +71,14 @@ await pRetried(() => run("🦄"), {
 ```
 
 ## License/Credits
+## Related
 
-- P(romise) Retry is licensed under the MIT license.
+- [pTimeout](https://github.com/KhushrajRathod/pTimeout)
+- [pQueue](https://github.com/KhushrajRathod/pQueue)
+- [retried](https://github.com/KhushrajRathod/retried)
+- [...more](https://github.com/KhushrajRathod/denoModules)
+
+## License
+
+- Promise Retried is licensed under the MIT license.
 - Code is adapted from [Sindre's p-retry for node](https://github.com/sindresorhus/p-retry) (also under the MIT license)
