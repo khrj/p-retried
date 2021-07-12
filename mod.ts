@@ -125,7 +125,7 @@ const decorateErrorWithCounts = (error: Error, attemptNumber: number, { retries 
  * @param input Function to be called, will be passed a single parameter that is
  * the attempt number. Is espected to return a `Promise` or any value.
  * 
- * @param inputOptions Additional options passed to `retried` - https://github.com/KhushrajRathod/retried
+ * @param inputOptions Additional options passed to `retried` - https://github.com/khrj/retried
  */
 export default function pRetried<T>(
     input: (attempt: number) => Promise<T>,

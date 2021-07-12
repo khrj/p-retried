@@ -6,12 +6,12 @@
         <b>Retry a promise-returning or async function. Deno port of <a href="https://github.com/sindresorhus/p-retry">sindresorhus's p-retry for node</a></b>
     </p>
     <p>
-        <img alt="build status" src="https://img.shields.io/github/workflow/status/KhushrajRathod/pRetried/Deno?label=checks" >
-        <img alt="language" src="https://img.shields.io/github/languages/top/KhushrajRathod/pRetried" >
-        <img alt="code size" src="https://img.shields.io/github/languages/code-size/KhushrajRathod/pRetried">
-        <img alt="issues" src="https://img.shields.io/github/issues/KhushrajRathod/pRetried" >
-        <img alt="license" src="https://img.shields.io/github/license/KhushrajRathod/pRetried">
-        <img alt="version" src="https://img.shields.io/github/v/release/KhushrajRathod/pRetried">
+        <img alt="build status" src="https://img.shields.io/github/workflow/status/khrj/p-retried/Deno?label=checks" >
+        <img alt="language" src="https://img.shields.io/github/languages/top/khrj/p-retried" >
+        <img alt="code size" src="https://img.shields.io/github/languages/code-size/khrj/p-retried">
+        <img alt="issues" src="https://img.shields.io/github/issues/khrj/p-retried" >
+        <img alt="license" src="https://img.shields.io/github/license/khrj/p-retried">
+        <img alt="version" src="https://img.shields.io/github/v/release/khrj/p-retried">
     </p>
     <p>
         <b><a href="https://deno.land/x/p_retried">View on deno.land</a></b>
@@ -74,16 +74,16 @@ await pRetried(() => run("🦄"), {
 
 - HUGE thanks to @sindresorhus -- this repository is mostly his code, modified to work with Deno
 
-[![Stargazers repo roster for @KhushrajRathod/pRetried](https://reporoster.com/stars/KhushrajRathod/pRetried)](https://github.com/KhushrajRathod/pRetried/stargazers)
+[![Stargazers repo roster for @khrj/p-retried](https://reporoster.com/stars/khrj/p-retried)](https://github.com/khrj/p-retried/stargazers)
 
-[![Forkers repo roster for @KhushrajRathod/pRetried](https://reporoster.com/forks/KhushrajRathod/pRetried)](https://github.com/KhushrajRathod/pRetried/network/members)
+[![Forkers repo roster for @khrj/p-retried](https://reporoster.com/forks/khrj/p-retried)](https://github.com/khrj/p-retried/network/members)
 
 ## Related
 
-- [pTimeout](https://github.com/KhushrajRathod/pTimeout)
-- [pQueue](https://github.com/KhushrajRathod/pQueue)
-- [retried](https://github.com/KhushrajRathod/retried)
-- [...more](https://github.com/KhushrajRathod/denoModules)
+- [p-timeout](https://github.com/khrj/p-timeout)
+- [p-queue](https://github.com/khrj/p-queue)
+- [retried](https://github.com/khrj/retried)
+- [...more](https://github.com/khrj/deno-modules)
 
 ## License
 
